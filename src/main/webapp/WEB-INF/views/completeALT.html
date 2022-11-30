@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tuteurs alternant</title>
+</head>
+<body>
+
+Ajout des tuteurs de <span th:text="${alt.nom}+' '+${alt.prenom}"></span>
+
+<form th:action="@{/createTE}" method="post">
+
+    <p>Entreprise : <select  name="tuteurEnt">
+        <option th:each="te : ${tuteursEntreprise}" th:value="${te.idPers}" th:text="${te.nom}+' '+${te.prenom}"/>
+    </select></p>
+
+    <p>Université : <select  name="tuteurUniv">
+        <option th:each="tu : ${tuteursUniversite}" th:value="${tu.idPers}" th:text="${tu.nom+' '+${te.prenom}}"/>
+    </select></p>
+
+
+    <button type="submit">creer</button>
+</form>
+
+</body>
+</html>

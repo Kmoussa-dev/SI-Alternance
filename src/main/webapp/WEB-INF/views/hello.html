@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SIR</title>
+</head>
+<body>
+
+<form th:action="@{/createEntreprise}" method="get">
+    <button type="submit">créer entreprise</button>
+</form>
+
+<form th:action="@{/createModalite}" method="get">
+    <button type="submit">créer modalité</button>
+</form>
+
+<form th:action="@{/createTuteurEntr}" method="get">
+    <button type="submit">créer tuteur entreprise</button>
+</form>
+
+<form th:action="@{/createTuteurUniv}" method="get">
+    <button type="submit">créer tuteur université</button>
+</form>
+
+<form th:action="@{/createAlt}" method="get">
+    <button type="submit">créer alternant</button>
+</form>
+
+<form th:action="@{/plusAlternants}">
+   <button type="submit">entreprise avec le plus d'alternants</button>
+</form>
+
+<form th:action="@{/motcle}">
+    Mot-clé : <input type="text" value="avecAlternants"/>
+    <button type="submit">entreprise avec au moins un alternant</button>
+</form>
+
+</body>
+</html>
